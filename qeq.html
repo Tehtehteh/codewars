@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+    {{error}}
+    <h1>Hullo, {{title}}</h1>
+
+        {% try %}
+            <ol>
+                {% for item in items1 %}
+                <li>
+                    {{item}}
+                </li>
+                {% end %}
+            </ol>
+        {% except Exception as e %}
+            <h3>
+                {{e}}
+            </h3>
+        {% finally %}
+            <h2>{{escape('qeqqqqq')}}</h2>
+        {% end %}
+</body>
+</html>
