@@ -26,6 +26,6 @@ def yieldMaxStr(strarr):
         return ''
     return strarr[maxi]
 
-
+input()
 m = [x for x in createL(["zone", "abigail", "theta", "form", "libe", "zas"], 2)]
 print(longest_consec(["zone", "abigail", "theta", "form", "libe", "zas"], -2))
