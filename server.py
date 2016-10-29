@@ -1,13 +1,19 @@
 import socket
 import threading
 
-host, port = '192.168.0.23', 8888
+host, port = '', 8888
 socketList = []
+
+def sockupdt(client, address):
+
+
+
+
 def update(socketList, add):
     while True:
         for conn in socketList:
             req = conn.recv(1024)
-            conn.send('%s: %s' % (add,req))
+            conn.sendall(req)
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)

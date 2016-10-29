@@ -1,10 +1,10 @@
 class Node(object):
-    def __init__(self, data):
+    def __init__(self, data=None, next=None):
         self.data = data
-        self.next = None
+        self.next = next
 
     def push(self, data):
-        self.next = Node(data)
+        self.next = Node(data, None)
 
 
 def build_one_two_three():

@@ -10,10 +10,10 @@ def updates(s):
 
 def main():
     s = socket.socket()
-    s.connect(('192.168.0.23', 8888))
+    s.connect(('127.0.0.1', 8888))
     while 1:
         data = input()
-        s.send(bytes(data, encoding='utf-8'))
+        s.sendall(bytes(data, encoding='utf-8'))
         threading._start_new_thread(updates, (s,))
 
 if __name__=='__main__':
