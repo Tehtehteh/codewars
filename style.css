@@ -1,0 +1,12 @@
+.wrap > div{
+    position: relative;
+}
+.wrap{
+    width: 50%;
+    top: 0px;
+    margin: auto;
+}
+
+.wrap > div {
+    vertical-align: top;
+}
